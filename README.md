@@ -9,13 +9,6 @@ Scripts and tools were tested in a custom-built Hyper-V lab using domain-joined 
 
 ## 📁 Projects
 
-### 🔐 [BitLocker GPO Deployment](./BitLocker-GPO-Deployment)
-Deploys a Group Policy Object (GPO) to enforce BitLocker encryption on domain-joined machines. Includes a PowerShell script to log encryption status and generate compliance reports.
-
-- Tools: Group Policy Management, PowerShell
-- Skills: Security automation, policy enforcement, GPO troubleshooting
-
----
 
 ### 🗂 [File Server & Access Management](./FileServer-AccessManagement)
 Builds a secure file server with NTFS and share permissions based on department groups. Includes a permissions audit script, drive mapping via GPO, and a ransomware recovery simulation using backups.
