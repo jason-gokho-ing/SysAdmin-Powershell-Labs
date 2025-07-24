@@ -51,7 +51,7 @@ Simulates real-world Tier 2 System Administrator responsibilities.
 | All folders | `Domain Admins` | Full Control |
 
 📸  
-!(images/create_folders_result.png)
+![Create_Reports.ps1 Script Results](images/create_folders_result.png)
 
 > 🛠️ Run as Administrator on the file server  
 > 🔐 Least privilege access enforced via NTFS
@@ -69,8 +69,8 @@ For each department:
 - Use **Item-Level Targeting** to assign based on group membership
 
 📸 
-!(images/gp_general.png) 
-!(images/gp_targeting.png)
+![Mapping Network Drive](images/gp_general.png) 
+![Targeting](images/gp_targeting.png)
 
 ---
 
@@ -81,7 +81,7 @@ For each department:
 - Fields include: `IdentityReference`, `AccessControlType`, `Rights`
 
 📸  
-!(images/create-fileshares-group.png)
+![Fileshares Group](images/create-filesshares-group.png)
 
 ---
 
