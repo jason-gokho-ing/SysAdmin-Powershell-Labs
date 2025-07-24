@@ -11,7 +11,7 @@ Scripts and tools were tested in a custom-built Hyper-V lab using domain-joined 
 
 
 ### 🗂 [File Server & Access Management](./FileServer-AccessManagement)
-Builds a secure file server with NTFS and share permissions based on department groups. Includes a permissions audit script, drive mapping via GPO, and a ransomware recovery simulation using backups.
+Builds a secure file server with NTFS and share permissions based on department groups. Includes a permissions audit script and drive mapping via GPO.
 
 - Tools: File Server Roles, NTFS, PowerShell, GPO
 - Skills: Access control, documentation, disaster recovery
