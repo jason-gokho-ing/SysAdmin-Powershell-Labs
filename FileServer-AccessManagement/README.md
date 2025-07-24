@@ -74,7 +74,7 @@ For each department:
 
 ---
 
-### 4️⃣ Run `folder_report.ps1` (Audit Report)
+### 4️⃣ Run `folder_report.ps1` (Create Audit Report)
 
 - Scans subfolders under `C:\Shares`
 - Exports NTFS permissions into a CSV
@@ -84,6 +84,9 @@ For each department:
 ![Fileshares Group](images/create-filesshares-group.png)
 
 ---
+
+### View Final Report of NTFS Permissions (Audit Report)
+![Outlook](images/reports_outlook.png)
 
 ## ✅ Summary: What This Project Demonstrates
 
