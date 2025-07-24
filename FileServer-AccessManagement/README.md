@@ -29,7 +29,7 @@ Simulates real-world Tier 2 System Administrator responsibilities.
 > Although the share is open to "Everyone," access is strictly controlled using **NTFS permissions** for each subfolder (set in the script below).
 
 📸  
-!(images/permissions_for_shared_folder.png)
+(images/permissions_for_shared_folder.png)
 
 ---
 
