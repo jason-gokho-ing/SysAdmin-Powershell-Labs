@@ -41,11 +41,11 @@ Once the task runs, check this folder for your output:
 
 ## 📸 Inside the Report Folder
 
-![Reports can be sorted by date](images/ReportsFolder.png)
+![Reports can be sorted by date](images/Reports-Folder.png)
 
 
 It will contain a list of all disabled users in your Active Directory.
 
 ## 📸 Output of Report File
 
-![Output of Report File](images/Disabled-Users-examples.png)
+![Output of Report File](images/disabled-Users-example.png)
