@@ -13,6 +13,8 @@ Uses Windows Task Scheduler to:
 - Run the script **automatically every day at 9:00 AM**
 - Run the task under the **SYSTEM account** with highest privileges
 
+---
+
 
 ## 📝 How to Use This (Tested in Lab)
 
@@ -23,10 +25,14 @@ Run the one-time setup script: Create-ScheduledTask.ps1. This will:
 
 <pre> powershell powershell.exe -ExecutionPolicy Bypass -File ".\Create-ScheduledTask.ps1" </pre>
 
+---
+
 
 You should see a confirmation message in PowerShell that the task has been registered.
 ## 📸 Screenshot: Powershell Script Running
 ![In Powershell](images/Script-Result.png)
+
+---
 
 
 Once the task runs, check this folder for your output:
