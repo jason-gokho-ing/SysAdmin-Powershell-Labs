@@ -18,7 +18,7 @@ The `Employees.csv` file must include the following columns:
 
 FirstName,LastName,Username,Password,Department,JobTitle
 
-[Example Text]!(images/csv_example.png)
+![Example Text](images/csv_example.png)
 
 How To Use:
 1. Place `powershell-ad.ps1` and `Employees.csv` in the same folder.
@@ -28,7 +28,7 @@ How To Use:
     .\powershell-ad.ps1
 
 ## 📸 The Log File will show if the users were created successfully. 
-[Log File]!(images/log_output.png)
+![Log File](images/log_output.png)
 
 Requirements:
 - Must run on a machine connected to an Active Directory domain
