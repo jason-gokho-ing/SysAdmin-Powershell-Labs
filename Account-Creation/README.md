@@ -1,4 +1,3 @@
-README.txt
 
 Project Name:
 PowerShell AD User Creation Script
@@ -9,7 +8,7 @@ This script automates the creation of user accounts in Active Directory using a 
 What It Does:
 - Reads user data from a file called `Employees.csv`
 - Creates Active Directory users with:
-  - First Name, Last Name, Username, Department, Job Title, and Password
+- First Name, Last Name, Username, Department, Job Title, and Password
 - Sets the user password
 - Adds users to an AD group based on their department
 - Forces users to change their password at next login
@@ -19,8 +18,7 @@ The `Employees.csv` file must include the following columns:
 
 FirstName,LastName,Username,Password,Department,JobTitle
 
-Example:
-Jane,Smith,jsmith,StrongPass123,Finance,Analyst
+[Example Text]!(/images/csv_example.png)
 
 How To Use:
 1. Place `powershell-ad.ps1` and `Employees.csv` in the same folder.
@@ -30,7 +28,7 @@ How To Use:
     .\powershell-ad.ps1
 
 ## 📸 The Log File will show if the users were created successfully. 
-!(/images/Screenshot 2025-07-16 162807.png)
+[Log File]!(/images/log_output.png)
 
 Requirements:
 - Must run on a machine connected to an Active Directory domain
