@@ -30,7 +30,7 @@ How To Use:
     .\powershell-ad.ps1
 
 ## 📸 The Log File will show if the users were created successfully. 
-!(images/Account-Creation/images/Screenshot 2025-07-16 162807.png)
+!(/images/Screenshot 2025-07-16 162807.png)
 
 Requirements:
 - Must run on a machine connected to an Active Directory domain
