@@ -35,6 +35,13 @@ Automates bulk user creation in Active Directory using a CSV import and PowerShe
 
 ---
 
+### 🚫 Disabled Active Directory Users Management
+Identifies and manages disabled user accounts in Active Directory. This project includes a script to locate disabled users and export results for auditing.
+- Tools: Active Directory, PowerShell
+- Skills: AD cleanup, user lifecycle management, PowerShell scripting
+
+---
+
 ### 🔐 [Security Hardening & Audit Automation](./Security-Hardening)
 Simulates endpoint security configuration and compliance checks using Group Policy and PowerShell to enforce and audit hardened settings on Windows 10/11 domain clients.
 
@@ -48,6 +55,7 @@ Simulates enterprise software deployment and patch management workflows using MS
 
 - Tools: Windows Server 2022, Group Policy Management Console, PowerShell 5.1+, Chocolatey, Hyper-V Lab
 - Skills: MSI deployment, Group Policy software installation, PowerShell automation, package management, software lifecycle management, deployment verification
+  
 ---
 
 ### 🧠 Skills Demonstrated
