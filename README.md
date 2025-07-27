@@ -43,7 +43,7 @@ Simulates endpoint security configuration and compliance checks using Group Poli
 
 ---
 
-### 📤 [📦 Software Deployment via GPO & Chocolatey](./Software-Deployment)
+### [📦 Software Deployment via GPO & Chocolatey](./Software-Deployment)
 Simulates enterprise software deployment and patch management workflows using MSI packages with Group Policy and scripted Chocolatey installs for fallback.
 
 - Tools: Windows Server 2022, Group Policy Management Console, PowerShell 5.1+, Chocolatey, Hyper-V Lab
@@ -51,7 +51,7 @@ Simulates enterprise software deployment and patch management workflows using MS
 - 
 ---
 
-###🧠 Skills Demonstrated
+### 🧠 Skills Demonstrated
 - Active Directory administration
 - Group Policy creation and targeting
 - PowerShell scripting and automation
