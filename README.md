@@ -35,9 +35,9 @@ Automates bulk user creation in Active Directory using a CSV import and PowerShe
 
 ---
 
-### 🚫 Disabled Active Directory Users Management
-Identifies and manages disabled user accounts in Active Directory. This project includes a script to locate disabled users and export results for auditing.
-- Tools: Active Directory, PowerShell
+### 🚫 [Disabled Active Directory Users Management](./DisabledUsers-ScheduledExport)
+Identifies disabled user accounts in Active Directory and automatically generates a daily report using Task Scheduler. The report is exported to CSV and scheduled to run every morning at 9 AM for ongoing audit and compliance.
+- Tools: Active Directory, PowerShell, Task Scheduler
 - Skills: AD cleanup, user lifecycle management, PowerShell scripting
 
 ---
