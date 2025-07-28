@@ -26,7 +26,7 @@ Builds a secure file server with NTFS and share permissions based on department 
 
 ---
 
-### 🛜 [Network Services](./FileServer-AccessManagement)
+### 🌐 [Network Services](./FileServer-AccessManagement)
 Sets up core Windows Server infrastructure with DHCP and DNS to support Active Directory in a virtual domain. Automatically assigns IPs to clients and enables internal name resolution across domain-joined machines.
 
 - Tools: Windows Server, Active Directory, DHCP, DNS, VMware (VMnet8 NAT)

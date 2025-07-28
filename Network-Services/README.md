@@ -1,5 +1,5 @@
 
-# 🛜 Network Services Lab – Active Directory, DHCP & DNS
+# 🌐 Network Services Lab – Active Directory, DHCP & DNS
 
 This lab demonstrates how to configure core network infrastructure services in a Windows Server domain environment, including **Active Directory**, **DHCP**, and **DNS**. It simulates a realistic enterprise setup with domain-joined Windows clients using dynamically assigned IPs and internal name resolution.
 
@@ -25,13 +25,13 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Joined client machines to the domain
 - Set Static DHCP for DC-Controller 
 
-📸 ![DC-Controller Settings](images/DC-Controller-IP.png)
+![DC-Controller Settings](images/DC-Controller-IP.png)
 
 ---
 
 ### 2️⃣ DHCP Configuration (Role Installed on DC)
 - Configured DHCP scope: `192.168.1.10–192.168.1.100`
-📸 ![DHCP Scope](images/scope-range.png)
+![DHCP Scope](images/scope-range.png)
 
 - Set DHCP options:
   - Router (Option 3): `192.168.1.2`
