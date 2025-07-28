@@ -1,6 +1,6 @@
 
 $RootDN = "OU=Company XYZ, DC=test-env, DC=local"
-$StaffOU = "OU=Staff,$RootDN"
+$UsersOU = "OU=Users,$RootDN"
 
 # log file will be used to store any errors that occur in the try-catch section
 $LogFile = ".\Logfile.txt"
@@ -14,20 +14,20 @@ if (!(Test-Path ".\employees.csv")) {
 #Create a new organizational unit for CompanyXYZ
 New-ADOrganizationalUnit -Name "Company XYZ" -Path "DC=test-env, DC=local" -ProtectedFromAccidentalDeletion $false
 
-# create organizational units for Staff of the company and clients of the company
-New-ADOrganizationalUnit -Name "Staff" -Path $RootDN -ProtectedFromAccidentalDeletion $false
+# create organizational units for Users of the company and clients of the company
+New-ADOrganizationalUnit -Name "Users" -Path $RootDN -ProtectedFromAccidentalDeletion $false
 
-# create departments within the staff to better organize
-New-ADOrganizationalUnit -Name "IT" -Path $StaffOU -ProtectedFromAccidentalDeletion $false
-New-ADOrganizationalUnit -Name "HR" -Path $StaffOU -ProtectedFromAccidentalDeletion $false
-New-ADOrganizationalUnit -Name "Accounting" -Path $StaffOU -ProtectedFromAccidentalDeletion $false
+# create departments within the Users to better organize
+New-ADOrganizationalUnit -Name "IT" -Path $UsersOU -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name "HR" -Path $UsersOU -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name "Accounting" -Path $UsersOU -ProtectedFromAccidentalDeletion $false
 
 # Create department groups for security purposes
 $departments = @("IT", "HR", "Accounting")
 
 foreach ($dept in $departments) {
 #put security groups in department paths
-    $deptOUPath = "OU=$dept,$StaffOU"
+    $deptOUPath = "OU=$dept,$UsersOU"
     $groupName = "$dept-Group"
 
     if (-not (Get-ADGroup -Filter { Name -eq $groupName })) {
@@ -48,7 +48,7 @@ $employees = Import-Csv -Path ".\employees.csv"
 foreach ($employee in $employees) {
     try {
         # Set department path
-        $departmentOU = "OU=$($employee.Department),$StaffOU"
+        $departmentOU = "OU=$($employee.Department),$UsersOU"
 
         # Create user parameters by storing variables in a hash table to reduce repitition
         $userParams = @{

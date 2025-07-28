@@ -35,10 +35,11 @@ Automates bulk user creation in Active Directory using a CSV import and PowerShe
 
 ---
 
-### 🚫 [Disabled Active Directory Users Management](./DisabledUsers-ScheduledExport)
-Identifies disabled user accounts in Active Directory and automatically generates a daily report using Task Scheduler. The report is exported to CSV and scheduled to run every morning at 9 AM for ongoing audit and compliance.
+### 🚪 [IT Offboarding Workflow](./Offboarding-Workflow)
+Simulates a real-world IT offboarding process by identifying disabled users, removing their group memberships, relocating their accounts to a secure OU, and exporting audit logs. The workflow is automated to run daily at 9:00 AM using Task Scheduler.
+
 - Tools: Active Directory, PowerShell, Task Scheduler
-- Skills: AD cleanup, user lifecycle management, PowerShell scripting
+- Skills: AD cleanup, user lifecycle management, PowerShell scripting, scheduled automation
 
 ---
 
