@@ -50,10 +50,10 @@ Simulates a real-world IT offboarding process by identifying disabled users, rem
 
 ---
 
-### 🔐 [Security Hardening & Audit Automation](./Security-Hardening)
-Simulates endpoint security configuration and compliance checks using Group Policy and PowerShell to enforce and audit hardened settings on Windows 10/11 domain clients.
+### 🔐 [ Security Hardening & Backup Strategy](./Security-Hardening)
+Simulates endpoint security configuration and backup planning using Group Policy and Windows Server Backup. This project introduces secure baseline enforcement, data protection, and recovery readiness in a domain environment.
 
-- Tools: Windows Server 2022, Group Policy Management Console, PowerShell 5.1+, Hyper-V Lab
-- Skills: Security baselining, Group Policy hardening, compliance auditing, PowerShell scripting, audit reporting, defense-in-depth
+- Tools: Windows Server 2022, Group Policy Management Console, Windows Server Backup, Event Viewer, Hyper-V Lab
+- Skills: Security hardening, GPO enforcement, backup configuration, disaster recovery planning, compliance validation, business continuity
 
 ---

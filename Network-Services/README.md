@@ -100,8 +100,3 @@ This lab demonstrates how to configure core network infrastructure services in a
 
 ---
 
-## 📊 Network Diagram
-
-Below is a conceptual diagram of the lab setup:
-
-![Network Diagram](images/network-diagram.png)
