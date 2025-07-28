@@ -1,4 +1,4 @@
-# 🚪 Active Directory Offboarding Automation (PowerShell Lab)
+# 🚪 Active Directory Offboarding Automation
 
 This lab demonstrates how to automate the offboarding process in an Active Directory environment using PowerShell and Task Scheduler. It mimics real-world Tier 2 System Administrator responsibilities such as deactivation, group cleanup, OU relocation, audit logging, and scheduled execution.
 

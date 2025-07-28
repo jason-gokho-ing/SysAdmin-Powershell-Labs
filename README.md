@@ -12,7 +12,6 @@ These projects were built and tested in a Hyper-V lab environment using:
 - Windows 10/11 Clients (Domain-joined)
 - PowerShell 5.1+
 - Group Policy Management Console
-- Chocolatey
 
 ---
 
@@ -24,6 +23,14 @@ Builds a secure file server with NTFS and share permissions based on department 
 
 - Tools: File Server Roles, NTFS, PowerShell, GPO
 - Skills: Access control, documentation, disaster recovery
+
+---
+
+### 🛜 [Network Services](./FileServer-AccessManagement)
+Sets up core Windows Server infrastructure with DHCP and DNS to support Active Directory in a virtual domain. Automatically assigns IPs to clients and enables internal name resolution across domain-joined machines.
+
+- Tools: Windows Server, Active Directory, DHCP, DNS, VMware (VMnet8 NAT)
+- Skills: Domain controller setup, DHCP scope configuration, DNS zone management, domain joining, client-server communication, network troubleshooting
 
 ---
 
