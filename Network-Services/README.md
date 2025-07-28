@@ -31,13 +31,15 @@ This lab demonstrates how to configure core network infrastructure services in a
 
 ### 2️⃣ DHCP Configuration (Role Installed on DC)
 - Configured DHCP scope: `192.168.1.10–192.168.1.100`
+📸 ![DHCP Scope](images/scope-range.png)
+
 - Set DHCP options:
   - Router (Option 3): `192.168.1.2`
   - DNS Server (Option 6): `192.168.1.128`
 - Authorized DHCP in Active Directory
 - Verified dynamic lease assignments
 
-📸 ![DHCP Scope](images/scope-range.png)
+
 📸 ![DHCP Lease List](images/dhcp-leases.png)
 
 ---
@@ -54,9 +56,8 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Verified AD-integrated DNS zone: `test-env.local`
 - Created test A records for internal resolution
 - Set up DNS forwarders to public DNS (e.g., 8.8.8.8)
-- Verified resolution using `nslookup` from clients
-
 📸 ![DNS Zones](images/dns-zone-setup.png)
+- Verified resolution using `nslookup` from clients
 📸 ![NSLookup Test](images/nslookup-success.png)
 
 ---
