@@ -40,7 +40,7 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Verified dynamic lease assignments
 
 
-📸 ![DHCP Lease List](images/dhcp-leases.png)
+![DHCP Lease List](images/dhcp-leases.png)
 
 ---
 
@@ -56,9 +56,11 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Verified AD-integrated DNS zone: `test-env.local`
 - Created test A records for internal resolution
 - Set up DNS forwarders to public DNS (e.g., 8.8.8.8)
-📸 ![DNS Zones](images/dns-zone-setup.png)
-- Verified resolution using `nslookup` from clients
-📸 ![NSLookup Test](images/nslookup-success.png)
+
+![DNS Zones](images/dns-zone-setup.png)
+
+- Verify resolution using `nslookup` from clients
+![NSLookup Test](images/nslookup-success.png)
 
 ---
 
@@ -71,7 +73,7 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Remote resources (like file server) accessible via FQDN
 - DHCP failover tested by disabling primary server
 
-📸 ![Client Domain Join](images/domain-join-success.png)
+![Client Domain Join](images/domain-join-success.png)
 
 ---
 
@@ -102,4 +104,4 @@ This lab demonstrates how to configure core network infrastructure services in a
 
 Below is a conceptual diagram of the lab setup:
 
-📸 ![Network Diagram](images/network-diagram.png)
+![Network Diagram](images/network-diagram.png)
