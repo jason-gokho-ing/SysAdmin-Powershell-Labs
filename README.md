@@ -29,11 +29,11 @@ Automates bulk user creation in Active Directory using a CSV import and PowerShe
 Builds a secure file server with NTFS and share permissions based on department groups. Includes a permissions audit script and drive mapping via GPO.
 
 - Tools: File Server Roles, NTFS, PowerShell, GPO
-- Skills: Access control, documentation, disaster recovery
+- Skills: Access control, documentation, NTFS/Share Permissions
 
 ---
 
-### 🌐 [Network Services](./FileServer-AccessManagement)
+### 🌐 [Network Services](./Network-Services)
 Sets up core Windows Server infrastructure with DHCP and DNS to support Active Directory in a virtual domain. Automatically assigns IPs to clients and enables internal name resolution across domain-joined machines.
 
 - Tools: Windows Server, Active Directory, DHCP, DNS, VMware (VMnet8 NAT)
