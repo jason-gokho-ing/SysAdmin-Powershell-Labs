@@ -57,17 +57,3 @@ Simulates endpoint security configuration and compliance checks using Group Poli
 - Skills: Security baselining, Group Policy hardening, compliance auditing, PowerShell scripting, audit reporting, defense-in-depth
 
 ---
-
-
-### 🧠 Skills Demonstrated
-- Active Directory administration
-- Group Policy creation and targeting
-- PowerShell scripting and automation
-- NTFS and share permission control
-- Task Scheduler and reporting
-- Security policy enforcement
-- Software deployment via GPO & CLI tools
-- Lab building and environment isolation
-
----
-
