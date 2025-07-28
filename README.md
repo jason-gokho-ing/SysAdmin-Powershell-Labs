@@ -1,7 +1,7 @@
-# 🖥️ IT Automation & System Administration Portfolio
+# 🖥️ IT Systems, Automation & Infrastructure Portfolio
 
-This portfolio showcases hands-on IT projects built using PowerShell and Windows Server technologies.  
-Each project demonstrates practical skills in Active Directory, Windows Server, Group Policy, file permissions, automation, and IT maintenance — aligned with Tier 1–2 IT Support and Sysadmin roles.
+This portfolio showcases practical, hands-on IT projects focused on Windows Server administration, automation, security hardening, and infrastructure services.  
+Each project highlights core Tier 1–2 sysadmin skills including Active Directory, Group Policy, file access management, user lifecycle automation, networking, and backup strategy — built and tested in a Hyper-V lab environment.
 
 ---
 
