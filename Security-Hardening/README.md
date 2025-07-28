@@ -100,7 +100,7 @@ The **File Server** (`fs01`) was configured to perform daily backups of:
 
 ## 🧰 Tools Used
 
-- Windows Server 2022
+- Windows Server 2025
 - Windows Server Backup (GUI)
 - Group Policy Management Console (GPMC)
 - Event Viewer

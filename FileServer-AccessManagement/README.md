@@ -99,7 +99,7 @@ For each department:
 
 ## 🧰 Tools Used
 
-- Windows Server 2019/2022
+- Windows Server 2025
 - Active Directory Domain Services
 - Group Policy Management Console
 - PowerShell 5.1+
