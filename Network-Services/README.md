@@ -25,7 +25,7 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Joined client machines to the domain
 - Set Static DHCP for DC-Controller 
 
-📸 ![DC-Controller Settings](/images/DC-Controller-IP.png)
+📸 ![DC-Controller Settings](images/DC-Controller-IP.png)
 
 ---
 
@@ -37,8 +37,8 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Authorized DHCP in Active Directory
 - Verified dynamic lease assignments
 
-📸 ![DHCP Scope](/images/scope-range.png)
-📸 ![DHCP Lease List](/images/dhcp-leases.png)
+📸 ![DHCP Scope](images/scope-range.png)
+📸 ![DHCP Lease List](images/dhcp-leases.png)
 
 ---
 
@@ -56,8 +56,8 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Set up DNS forwarders to public DNS (e.g., 8.8.8.8)
 - Verified resolution using `nslookup` from clients
 
-📸 ![DNS Zones](/images/dns-zone-setup.png)
-📸 ![NSLookup Test](/images/nslookup-success.png)
+📸 ![DNS Zones](images/dns-zone-setup.png)
+📸 ![NSLookup Test](images/nslookup-success.png)
 
 ---
 
@@ -70,7 +70,7 @@ This lab demonstrates how to configure core network infrastructure services in a
 - Remote resources (like file server) accessible via FQDN
 - DHCP failover tested by disabling primary server
 
-📸 ![Client Domain Join](/images/domain-join-success.png)
+📸 ![Client Domain Join](images/domain-join-success.png)
 
 ---
 
@@ -101,4 +101,4 @@ This lab demonstrates how to configure core network infrastructure services in a
 
 Below is a conceptual diagram of the lab setup:
 
-📸 ![Network Diagram](/images/network-diagram.png)
+📸 ![Network Diagram](images/network-diagram.png)
