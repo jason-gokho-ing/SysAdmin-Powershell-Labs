@@ -17,6 +17,13 @@ These projects were built and tested in a Hyper-V lab environment using:
 
 ## 📁 Projects
 
+### 👥 [Active Directory User Creation](./Account-Creation)
+Automates bulk user creation in Active Directory using a CSV import and PowerShell script. Assigns users to OU-based security groups and sets initial attributes like department and phone number.
+
+- Tools: Active Directory, PowerShell, CSV
+- Skills: User provisioning, organizational units, scripting for HR workflows
+
+---
 
 ### 🗂 [File Server & Access Management](./FileServer-AccessManagement)
 Builds a secure file server with NTFS and share permissions based on department groups. Includes a permissions audit script and drive mapping via GPO.
@@ -31,14 +38,6 @@ Sets up core Windows Server infrastructure with DHCP and DNS to support Active D
 
 - Tools: Windows Server, Active Directory, DHCP, DNS, VMware (VMnet8 NAT)
 - Skills: Domain controller setup, DHCP scope configuration, DNS zone management, domain joining, client-server communication, network troubleshooting
-
----
-
-### 👥 [Active Directory User Creation](./Account-Creation)
-Automates bulk user creation in Active Directory using a CSV import and PowerShell script. Assigns users to OU-based security groups and sets initial attributes like department and phone number.
-
-- Tools: Active Directory, PowerShell, CSV
-- Skills: User provisioning, organizational units, scripting for HR workflows
 
 ---
 
