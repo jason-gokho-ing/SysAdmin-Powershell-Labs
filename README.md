@@ -49,10 +49,10 @@ Simulates a real-world IT offboarding process by identifying disabled users, rem
 
 ---
 
-### 🛡️ [ Security Hardening & Backup Strategy](./Security-Hardening)
-Simulates endpoint security configuration and backup planning using Group Policy and Windows Server Backup. This project introduces secure baseline enforcement, data protection, and recovery readiness in a domain environment.
+### 🛡️ [Security Hardening & Backup Strategy](./Security-Hardening)
+Implements comprehensive enterprise security controls through Group Policy and establishes robust backup/recovery procedures. Features security monitoring, compliance verification, and disaster recovery testing in a domain environment.
 
-- Tools: Windows Server 2025, Group Policy Management Console, Windows Server Backup, Event Viewer, Hyper-V Lab
-- Skills: Security hardening, GPO enforcement, backup configuration, disaster recovery planning, compliance validation, business continuity
+- Tools: Windows Server 2025, Group Policy Management Console, Windows Server Backup, Event Viewer, Security Event Logs
+- Skills: Security baseline enforcement, GPO management, backup strategy, disaster recovery planning, security monitoring, compliance auditing, event log analysis
 
 ---
