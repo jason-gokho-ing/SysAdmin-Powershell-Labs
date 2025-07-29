@@ -59,7 +59,7 @@ The file server was configured for daily backups of:
 | Retention     | 30 days (automatic cleanup)    |
 | Monitoring    | Manual via Event Viewer        |
 
-![Backup Schedule](images/backup-schedule.png)
+<img src="images/backup-schedule.png" alt="Backup Schedule" width="300">
 
 ---
 
