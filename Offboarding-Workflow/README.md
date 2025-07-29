@@ -69,8 +69,9 @@ These variables define the base OU and the destination for disabled users.
 - Logs each user to `C:\Reports\OffboardingLog_<date>.csv`
 
 ### Disabled User Report Output and Results
-![Offboard Results](images/offboarding_script_results.png) ![AD Disabled Users](images/ad-disabledusers.png)
 
+<img src="images/offboarding_script_results.png" alt="Offboarding Script" width="600">
+<img src="images/ad-disabledusers.png" alt="Disabled Users" width="600">
 ---
 
 ### 4️⃣ Automate Offboarding with Task Scheduler (occurs every day at 9AM)
@@ -84,7 +85,8 @@ These variables define the base OU and the destination for disabled users.
 ```
 
 If done correctly, you should be able to see the Task in Task Scheduler: 
-![Task Scheduler](images/task-scheduler-offboarding.png)
+<img src="images/task-scheduler-offboarding.png" alt="Task Scheduler" width="600">
+
 
 ---
 
