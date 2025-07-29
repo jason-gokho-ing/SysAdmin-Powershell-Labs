@@ -117,7 +117,6 @@ The **File Server** (`file-server`) was configured to perform daily backups of:
 - Windows Server Backup (GUI)
 - Group Policy Management Console (GPMC)
 - Event Viewer
-- NTFS Permissions (optional)
 - Hyper-V Virtual Lab
 
 ---
