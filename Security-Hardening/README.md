@@ -29,7 +29,7 @@ A Group Policy Object (`Security-Baseline`) was applied to the **Workstations OU
 | **Network Access**    | - Disable guest account                                                  |
 | **Remote Access**     | - Disable RDP by default<br>- Enable Windows Defender Firewall           |
 
-📁 *GPO Report is available in `/GPO Reports/Security_Baseline.htm`*
+📁 *GPO Report is available in `/Reports/Security_Baseline.htm`*
 
 ### 🔐 Security Rationale
 
@@ -71,23 +71,20 @@ The file server was configured for daily backups of:
 - Performed **manual file restore test**  
 - Confirmed NTFS metadata and data integrity
 
-📁 *Report available in `Restore_Test_Report.txt`*
+<img src="images/event4.png" alt="Event 4" width="300">
 
 ---
 
 ## 4. Security Monitoring & Compliance
 
-**Event Log Analysis:**
-- **Failed login attempts**: Monitored Security Event ID 4625 for brute force indicators
-- **Policy changes**: Tracked Event ID 4719 for unauthorized GPO modifications
-- **Account lockouts**: Reviewed Event ID 4740 to validate lockout policy effectiveness
+### Key Monitoring Activities (Event Viewer)
 
-**Compliance Verification:**
-- **Password policy audit**: Verified all domain accounts meet 12-character requirement
-- **Guest account status**: Confirmed guest account disabled across all domain machines
-- **Firewall status**: Validated Windows Defender Firewall enabled on all workstations
+| Activity | Description | Screenshot |
+|----------|-------------|------------|
+| **Failed Login Analysis** | Monitored Security Event ID 4625 for brute force indicators | <img src="images/failed-logins.png" alt="Failed Login Events" width="250"> |
+| **Account Lockout Tracking** | Reviewed Event ID 4740 to validate lockout policy effectiveness | <img src="images/account-lockout.png" alt="Account Lockout Events" width="250"> |
+| **Successful Login Monitoring** | Tracked Event ID 4624 for user authentication patterns and logon types | <img src="images/successful-logins.png" alt="Successful Login Events" width="250"> |
 
-📁 *Security audit results in `/Security_Audit_Report.xlsx`*
 
 ---
 
