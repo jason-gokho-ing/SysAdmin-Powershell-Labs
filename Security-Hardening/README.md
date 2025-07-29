@@ -31,25 +31,13 @@ A Group Policy Object (`Security-Baseline`) was applied to the **Workstations OU
 
 📁 *GPO Report is available in `/GPO Reports/Security_Baseline.htm`*
 
----
+### 🔐 Security Rationale
 
-### Why These Settings Matter
-
-#### **Password Policies & Account Lockout**
-- **12-character minimum**: Short passwords can be cracked in minutes using modern tools. A 12-character password takes exponentially longer to break through brute force attacks (automated password guessing).
-- **Account lockout after 5 attempts**: This stops attackers from repeatedly trying different passwords. Without lockout, an attacker could try thousands of password combinations automatically.
-
-#### **User Account Control (UAC) & Secure Login**
-- **UAC prompts**: When enabled, Windows asks for permission before allowing administrative changes. This prevents malware from silently installing or modifying system settings.
-- **Ctrl+Alt+Del requirement**: This creates a "secure attention sequence" that only Windows can intercept, making it impossible for keylogger malware to capture your login credentials.
-
-#### **Guest Account & Network Access Controls**
-- **Guest account disabled**: The guest account allows anyone to log in without a password. Disabling it removes an easy entry point for attackers who gain physical access to machines.
-
-#### **Remote Access & Firewall Protection**
-- **RDP disabled by default**: Remote Desktop Protocol is frequently targeted by ransomware groups. Disabling it unless specifically needed reduces liklihood of getting hacked
-- **Windows Defender Firewall enabled**: Acts as the first line of defense, blocking unauthorized network connections and malicious traffic from reaching your system.
-
+These settings protect against common attack vectors:
+- **Strong passwords + lockout**: Prevents brute force and credential stuffing attacks
+- **UAC + secure login**: Blocks privilege escalation and keylogger attacks  
+- **Guest account disabled**: Eliminates unauthorized local access
+- **RDP disabled + firewall**: Protects against ransomware and network intrusions
 
 ---
 
@@ -71,25 +59,14 @@ The file server was configured for daily backups of:
 | Retention      | 30 days (automatic cleanup)   |
 | Monitoring     | Manual via Event Viewer       |
 
-### Why These Backup Choices Matter
 
-- **System State backup**: Contains Active Directory database, registry, and boot files. Critical for domain controller recovery after hardware failure or corruption.
-- **8:00 PM schedule**: Runs during off-hours to minimize impact on users and system performance.
-- **Separate VHD target**: Isolates backup data from main system drive. If primary storage fails, backups remain accessible.
-- **30-day retention**: Balances storage space with recovery options. Allows recovery from issues discovered weeks later.
-
-
-![Backup](images/domain-join-success.png)
-
-
-📁 *See `/Backup_Config` for screenshots and logs.*
+![Backup](images/backup-schedule.png)
 
 ---
 
-### 3. Backup Validation
+## ✅ 3. Backup Validation
 
-Steps Performed:
-
+**Steps Performed:**
 - Confirmed backup job created in WSB  
 - Verified completion via Event Viewer (Event ID 4)  
 - Performed **manual file restore test**  
@@ -99,14 +76,14 @@ Steps Performed:
 
 ---
 
-### 4. Security Monitoring & Compliance
+## 4. Security Monitoring & Compliance
 
-### Event Log Analysis
+**Event Log Analysis:**
 - **Failed login attempts**: Monitored Security Event ID 4625 for brute force indicators
 - **Policy changes**: Tracked Event ID 4719 for unauthorized GPO modifications
 - **Account lockouts**: Reviewed Event ID 4740 to validate lockout policy effectiveness
 
-### Compliance Verification
+**Compliance Verification:**
 - **Password policy audit**: Verified all domain accounts meet 12-character requirement
 - **Guest account status**: Confirmed guest account disabled across all domain machines
 - **Firewall status**: Validated Windows Defender Firewall enabled on all workstations
