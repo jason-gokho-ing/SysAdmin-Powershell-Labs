@@ -1,7 +1,6 @@
 # 🖥️ IT Systems, Automation & Infrastructure Portfolio
 
-This portfolio showcases practical, hands-on IT projects focused on Windows Server administration, automation, security hardening, and infrastructure services.  
-Each project highlights core Tier 1–2 sysadmin skills including Active Directory, Group Policy, file access management, user lifecycle automation, networking, and backup strategy — built and tested in a Hyper-V lab environment.
+This portfolio showcases practical, hands-on IT projects focused on Windows Server administration, automation, security hardening, and infrastructure services. Each project highlights core Tier 1–2 sysadmin skills including Active Directory, Group Policy, file access management, user lifecycle automation, networking, and backup strategy — built and tested in a Hyper-V lab environment.
 
 ---
 

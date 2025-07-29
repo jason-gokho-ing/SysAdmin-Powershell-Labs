@@ -66,7 +66,7 @@ The file server was configured for daily backups of:
 |----------------|-------------------------------|
 | Tool Used      | Windows Server Backup (GUI)   |
 | Schedule       | Daily at 8:00 PM              |
-| Target Drive   | `D:\Backup` (mounted VHD)     |
+| Target Drive   | `X:\Backup` (mounted VHD)     |
 | Backup Type    | Full volume + system state    |
 | Retention      | 30 days (automatic cleanup)   |
 | Monitoring     | Manual via Event Viewer       |
@@ -79,14 +79,14 @@ The file server was configured for daily backups of:
 - **30-day retention**: Balances storage space with recovery options. Allows recovery from issues discovered weeks later.
 
 
-![Client Domain Join](images/domain-join-success.png)
+![Backup](images/domain-join-success.png)
 
 
 📁 *See `/Backup_Config` for screenshots and logs.*
 
 ---
 
-## ✅ 3. Backup Validation
+### 3. Backup Validation
 
 Steps Performed:
 
@@ -99,14 +99,14 @@ Steps Performed:
 
 ---
 
-## 4. Security Monitoring & Compliance
+### 4. Security Monitoring & Compliance
 
-### 🔍 Event Log Analysis
+### Event Log Analysis
 - **Failed login attempts**: Monitored Security Event ID 4625 for brute force indicators
 - **Policy changes**: Tracked Event ID 4719 for unauthorized GPO modifications
 - **Account lockouts**: Reviewed Event ID 4740 to validate lockout policy effectiveness
 
-### 📊 Compliance Verification
+### Compliance Verification
 - **Password policy audit**: Verified all domain accounts meet 12-character requirement
 - **Guest account status**: Confirmed guest account disabled across all domain machines
 - **Firewall status**: Validated Windows Defender Firewall enabled on all workstations
