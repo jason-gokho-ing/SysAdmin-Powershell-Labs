@@ -1,4 +1,4 @@
-# 👥 Active Directory Account Creation (Windows Server Lab)
+# 👥 Active Directory Account Creation
 
 This script automates the creation of user accounts in Active Directory using a CSV file. It’s designed for IT administrators who need to bulk-create users quickly and consistently.
 

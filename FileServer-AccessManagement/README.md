@@ -1,4 +1,4 @@
-# 📁 File Server & Access Management (Windows Server Lab)
+# 📁 File Server & Access Management 
 
 This lab demonstrates how to set up and manage a secure file server in a Windows Server domain environment using automation, NTFS permissions, Group Policy, and PowerShell scripting.
 
