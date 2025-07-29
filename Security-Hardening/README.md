@@ -50,31 +50,14 @@ The file server was configured for daily backups of:
 
 ### 🛠️ Backup Settings
 
-| Setting | Value |
-|---------|-------|
-| Tool Used | Windows Server Backup (GUI) |
-| Schedule | Daily at 8:00 PM |
-| Target Drive | `X:\Backup` (mounted VHD) |
-| Backup Type | Full volume + system state |
-| Retention | 30 days (automatic cleanup) |
-| Monitoring | Manual via Event Viewer |
-
-<div style="display: flex; align-items: flex-start;">
-<div style="flex: 1;">
-
-**Configuration Details:**
-- Automated daily backup schedule
-- Separate VHD isolation for data protection
-- 30-day retention for compliance requirements
-- Event Viewer monitoring for job status
-
-</div>
-<div style="flex: 1; text-align: center;">
-
-<img src="images/backup-schedule.png" alt="Backup Schedule Configuration" width="350">
-
-</div>
-</div>
+| Setting       | Value                          | Image                                                                      |
+|---------------|--------------------------------|----------------------------------------------------------------------------|
+| Tool Used     | Windows Server Backup (GUI)   | <img src="images/backup-schedule.png" alt="Backup Schedule" width="300">  |
+| Schedule      | Daily at 8:00 PM              |                                                                            |
+| Target Drive  | X:\Backup (mounted VHD)        |                                                                            |
+| Backup Type   | Full volume + system state     |                                                                            |
+| Retention     | 30 days (automatic cleanup)    |                                                                            |
+| Monitoring    | Manual via Event Viewer        |                                                                            |
 
 ---
 
