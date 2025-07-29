@@ -71,7 +71,7 @@ The file server was configured for daily backups of:
 - Performed **manual file restore test**  
 - Confirmed NTFS metadata and data integrity
 
-<img src="images/event4.png" alt="Event 4" width="300">
+<img src="images/event4.png" alt="Event 4" >
 
 ---
 
