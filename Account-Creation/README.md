@@ -29,7 +29,7 @@ FirstName,LastName,Username,Password,Department,JobTitle
 
     .\powershell-ad.ps1
 
-## 📸 The Log File will show if the users were created successfully. 
+## The Log File will show if the users were created successfully. 
 ![Log File](images/log_output.png)
 
 Requirements:

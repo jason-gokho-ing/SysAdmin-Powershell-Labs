@@ -28,7 +28,7 @@ Simulates real-world Tier 2 System Administrator responsibilities.
 > ⚠️ **Security Note:**\
 > Although the share is open to "Everyone," access is strictly controlled using **NTFS permissions** for each subfolder (set in the script below).
 
-📸  
+
 (images/permissions_for_shared_folder.png)
 
 ---
@@ -50,7 +50,7 @@ Simulates real-world Tier 2 System Administrator responsibilities.
 | Accounting | `accounting-group` | Modify  |
 | All folders | `Domain Admins` | Full Control |
 
-📸  
+  
 ![Create_Reports.ps1 Script Results](images/create_folders_result.png)
 
 > 🛠️ Run as Administrator on the file server  
@@ -68,7 +68,7 @@ For each department:
 - Map a network drive (e.g., H:\ for HR)
 - Use **Item-Level Targeting** to assign based on group membership
 
-📸 
+
 ![Mapping Network Drive](images/gp_general.png) 
 ![Targeting](images/gp_targeting.png)
 
@@ -80,7 +80,7 @@ For each department:
 - Exports NTFS permissions into a CSV
 - Fields include: `IdentityReference`, `AccessControlType`, `Rights`
 
-📸  
+
 ![Fileshares Group](images/create-filesshares-group.png)
 
 ---
