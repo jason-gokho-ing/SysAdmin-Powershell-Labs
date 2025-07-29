@@ -59,7 +59,7 @@ The file server was configured for daily backups of:
 | Retention     | 30 days (automatic cleanup)    |
 | Monitoring    | Manual via Event Viewer        |
 
-<img src="images/backup-schedule.png" alt="Backup Schedule" width="300">
+<img src="images/backup-schedule.png" alt="Backup Schedule" width="600">
 
 ---
 
@@ -81,9 +81,9 @@ The file server was configured for daily backups of:
 
 | Activity | Description | Screenshot |
 |----------|-------------|------------|
-| **Failed Login Analysis** | Monitored Security Event ID 4625 for brute force indicators | <img src="images/failed-logins.png" alt="Failed Login Events" width="250"> |
-| **Account Lockout Tracking** | Reviewed Event ID 4740 to validate lockout policy effectiveness | <img src="images/account-lockout.png" alt="Account Lockout Events" width="250"> |
-| **Successful Login Monitoring** | Tracked Event ID 4624 for user authentication patterns and logon types | <img src="images/successful-logins.png" alt="Successful Login Events" width="250"> |
+| **Failed Login Analysis** | Monitored Security Event ID 4625 for brute force indicators | <img src="images/failed-logins.png" alt="Failed Login Events" width="400"> |
+| **Account Lockout Tracking** | Reviewed Event ID 4740 to validate lockout policy effectiveness | <img src="images/account-lockout.png" alt="Account Lockout Events" width="400"> |
+| **Successful Login Monitoring** | Tracked Event ID 4624 for user authentication patterns and logon types | <img src="images/successful-logins.png" alt="Successful Login Events" width="400"> |
 
 
 ---
