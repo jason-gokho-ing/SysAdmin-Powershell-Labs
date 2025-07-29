@@ -53,11 +53,11 @@ The file server was configured for daily backups of:
 | Setting       | Value                          | Image                                    |
 |---------------|--------------------------------|------------------------------------------|
 | Tool Used     | Windows Server Backup (GUI)   | ![Backup Schedule](images/backup-schedule.png) 
-| Schedule      | Daily at 8:00 PM              |                                          
-| Target Drive  | X:\Backup (mounted VHD)        |                                          
-| Backup Type   | Full volume + system state     |                                          
-| Retention     | 30 days (automatic cleanup)    |                                          
-| Monitoring    | Manual via Event Viewer        |                                          |
+| Schedule      | Daily at 8:00 PM                                                        
+| Target Drive  | X:\Backup (mounted VHD)                                                  
+| Backup Type   | Full volume + system state                                               
+| Retention     | 30 days (automatic cleanup)                                             
+| Monitoring    | Manual via Event Viewer                                                  |
 
 ---
 
