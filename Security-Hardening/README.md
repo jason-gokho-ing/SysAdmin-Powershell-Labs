@@ -1,6 +1,6 @@
 # 🛡️ Windows Security Hardening & Backup Strategy
 
-This project demonstrates how to secure Windows domain-joined systems using Group Policy and implement a reliable backup strategy with Windows Server Backup. It reflects key Tier 2 Sysadmin responsibilities: enforcing security baselines and ensuring data recoverability.
+This project demonstrates essential Windows system administration skills: securing domain-joined systems with Group Policy and implementing reliable backups using Windows Server Backup. Perfect for demonstrating Tier 2 System Administrator capabilities in security baseline enforcement and data recovery planning.
 
 ---
 
@@ -29,16 +29,30 @@ A Group Policy Object (`Security-Baseline`) was applied to the **Workstations OU
 | **Network Access**    | - Disable guest account                                                  |
 | **Remote Access**     | - Disable RDP by default<br>- Enable Windows Defender Firewall           |
 
-📁 *Screenshots available in `/GPO_Screenshots`*
+📁 *GPO Report is available in `/GPO Reports`*
 
 ---
 
-### Security Rationale (Brief Summary)
+### Security Rationale: Why These Settings Matter
 
-- **Strong Passwords + Lockout** → Prevent brute force attacks  
-- **UAC + Secure Login** → Reduce privilege escalation + keylogger risk  
-- **Guest Account Disabled** → Eliminates unauthorized local access vector  
-- **Firewall + RDP Disabled** → Blocks common ransomware entry points
+#### **Password Policies & Account Lockout**
+- **12-character minimum**: Short passwords can be cracked in minutes using modern tools. A 12-character password takes exponentially longer to break through brute force attacks (automated password guessing).
+- **Account lockout after 5 attempts**: This stops attackers from repeatedly trying different passwords. Without lockout, an attacker could try thousands of password combinations automatically.
+- **Real-world impact**: Prevents credential stuffing attacks where hackers use stolen password lists from data breaches.
+
+#### **User Account Control (UAC) & Secure Login**
+- **UAC prompts**: When enabled, Windows asks for permission before allowing administrative changes. This prevents malware from silently installing or modifying system settings.
+- **Ctrl+Alt+Del requirement**: This creates a "secure attention sequence" that only Windows can intercept, making it impossible for keylogger malware to capture your login credentials.
+- **Real-world impact**: Stops many types of malware infections and prevents unauthorized system modifications.
+
+#### **Guest Account & Network Access Controls**
+- **Guest account disabled**: The guest account allows anyone to log in without a password. Disabling it removes an easy entry point for attackers who gain physical access to machines.
+- **Real-world impact**: Eliminates a common vector used by attackers for initial access and lateral movement within networks.
+
+#### **Remote Access & Firewall Protection**
+- **RDP disabled by default**: Remote Desktop Protocol is frequently targeted by ransomware groups. Disabling it unless specifically needed reduces your attack surface.
+- **Windows Defender Firewall enabled**: Acts as the first line of defense, blocking unauthorized network connections and malicious traffic from reaching your system.
+- **Real-world impact**: Many recent ransomware attacks specifically target exposed RDP services to gain initial access to networks.
 
 ---
 
@@ -46,8 +60,8 @@ A Group Policy Object (`Security-Baseline`) was applied to the **Workstations OU
 
 The file server was configured for daily backups of:
 
-- 🛡️ **System State** (for Active Directory recovery)  
-- 📁 **Shared Data** (`C:\Shared` folder)
+- **System State** (for Active Directory recovery)  
+- **Shared Data** (`C:\Shared` folder)
 
 ### 🛠️ Backup Settings
 
@@ -57,7 +71,15 @@ The file server was configured for daily backups of:
 | Schedule       | Daily at 8:00 PM              |
 | Target Drive   | `D:\Backup` (mounted VHD)     |
 | Backup Type    | Full volume + system state    |
+| Retention      | 30 days (automatic cleanup)   |
 | Monitoring     | Manual via Event Viewer       |
+
+### Why These Backup Choices Matter
+
+- **System State backup**: Contains Active Directory database, registry, and boot files. Critical for domain controller recovery after hardware failure or corruption.
+- **8:00 PM schedule**: Runs during off-hours to minimize impact on users and system performance.
+- **Separate VHD target**: Isolates backup data from main system drive. If primary storage fails, backups remain accessible.
+- **30-day retention**: Balances storage space with recovery options. Allows recovery from issues discovered weeks later.
 
 📁 *See `/Backup_Config` for screenshots and logs.*
 
@@ -94,12 +116,12 @@ The file server was configured for daily backups of:
 
 ---
 
-## 🧠 What This Project Demonstrates
+## 🧠 Skills Demonstrated
 
-- GPO-based system hardening aligned with real-world baselines  
-- Daily backup planning using native Windows Server tools  
-- Manual recovery validation and backup job monitoring  
-- Strong focus on **business continuity** and **security compliance**
+- **Group Policy Management**: Applied security baselines using GPMC
+- **Windows Server Backup**: Configured automated daily backup schedules  
+- **System Validation**: Performed backup testing and recovery verification
+- **Security Documentation**: Created compliance matrices and risk assessments
 
 ---
 
