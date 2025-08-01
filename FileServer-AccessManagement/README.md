@@ -33,14 +33,17 @@ Simulates real-world Tier 2 System Administrator responsibilities.
 
 ---
 
-### 2️⃣ Run `create_folders.ps1` (Folder Creation + NTFS)
+### 2️⃣ Run `create_folders.ps1` (Complete File Server Setup)
 
-- Creates three subfolders inside `D:\Shares`:
+**This script performs both folder creation AND generates an audit report in one step:**
+
+- Creates three subfolders inside `C:\Shares`:
   - `Accounting`, `IT`, `HR`
 - Applies NTFS permissions:
   - `Domain Admins`: Full Control
   - Department group (e.g., `hr-group`): Modify
-- Creates and shares each folder over the network
+- Generates a permissions audit report automatically
+- Saves report to: `C:\Scripts\FolderPermissions_Report.csv`
 
 📜 NTFS Permissions Applied:
 | Folder     | Group          | Rights       |
@@ -54,7 +57,8 @@ Simulates real-world Tier 2 System Administrator responsibilities.
 ![Create_Reports.ps1 Script Results](images/create_folders_result.png)
 
 > 🛠️ Run as Administrator on the file server  
-> 🔐 Least privilege access enforced via NTFS
+> 🔐 Least privilege access enforced via NTFS  
+> 📊 Audit report automatically generated
 
 ---
 
@@ -74,12 +78,12 @@ For each department:
 
 ---
 
-### 4️⃣ Run `folder_report.ps1` (Create Audit Report)
+### 4️⃣ View the Generated Audit Report
 
-- Scans subfolders under `C:\Shares`
-- Exports NTFS permissions into a CSV
-- Fields include: `IdentityReference`, `AccessControlType`, `Rights`
-
+The `create_folders.ps1` script automatically generates a permissions report at:
+- **Location**: `C:\Scripts\FolderPermissions_Report.csv`
+- **Contents**: All NTFS permissions for each department folder
+- **Fields**: Folder, User_or_Group, Access_Level, Permission_Type
 
 ![Fileshares Group](images/create-filesshares-group.png)
 
