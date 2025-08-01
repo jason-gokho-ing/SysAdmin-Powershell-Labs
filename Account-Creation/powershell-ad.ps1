@@ -22,25 +22,21 @@ New-ADOrganizationalUnit -Name "IT" -Path $UsersOU -ProtectedFromAccidentalDelet
 New-ADOrganizationalUnit -Name "HR" -Path $UsersOU -ProtectedFromAccidentalDeletion $false
 New-ADOrganizationalUnit -Name "Accounting" -Path $UsersOU -ProtectedFromAccidentalDeletion $false
 
-# Create department groups for security purposes
-$departments = @("IT", "HR", "Accounting")
+# Create groups for each department. 
+try {
+    New-ADGroup -Name "IT-Group" -GroupScope Global -GroupCategory Security -Path "OU=IT,$UsersOU" -ErrorAction Stop
+    Write-Host "Created IT-Group"
+} catch { Write-Host "IT-Group already exists or error: $_" }
 
-foreach ($dept in $departments) {
-#put security groups in department paths
-    $deptOUPath = "OU=$dept,$UsersOU"
-    $groupName = "$dept-Group"
+try {
+    New-ADGroup -Name "HR-Group" -GroupScope Global -GroupCategory Security -Path "OU=HR,$UsersOU" -ErrorAction Stop
+    Write-Host "Created HR-Group"
+} catch { Write-Host "HR-Group already exists or error: $_" }
 
-    if (-not (Get-ADGroup -Filter { Name -eq $groupName })) {
-        $groupParams = @{
-            Name         = $groupName
-            GroupScope   = 'Global'
-            GroupCategory= 'Security'
-            Path         = $deptOUPath
-        }
-        New-ADGroup @groupParams
-        Write-Host "Created group: $groupName in $deptOUPath"
-    }
-}
+try {
+    New-ADGroup -Name "Accounting-Group" -GroupScope Global -GroupCategory Security -Path "OU=Accounting,$UsersOU" -ErrorAction Stop
+    Write-Host "Created Accounting-Group"
+} catch { Write-Host "Accounting-Group already exists or error: $_" }
 
 # Load employees from CSV
 $employees = Import-Csv -Path ".\employees.csv"
@@ -50,28 +46,22 @@ foreach ($employee in $employees) {
         # Set department path
         $departmentOU = "OU=$($employee.Department),$UsersOU"
 
-        # Create user parameters by storing variables in a hash table to reduce repitition
-        $userParams = @{
-            Name               = "$($employee.FirstName) $($employee.LastName)"
-            SamAccountName     = $employee.Username
-            UserPrincipalName  = "$($employee.Username)@test-env.local"
-            Path               = $departmentOU
-            AccountPassword    = (ConvertTo-SecureString "DefaultP@ssword1" -AsPlainText -Force)
-            Enabled            = $true
-            Title              = $employee.JobTitle
-            EmployeeID         = $employee.EmployeeNumber
-            Office             = $employee.OfficeLocation
-            OfficePhone        = $employee.PhoneNumber
-            ErrorAction        = 'Stop'
-        }
-
-        # Create new user using parameters 
-        New-ADUser @userParams
+        # Create new user
+        New-ADUser -Name "$($employee.FirstName) $($employee.LastName)" `
+                   -SamAccountName $employee.Username `
+                   -UserPrincipalName "$($employee.Username)@test-env.local" `
+                   -Path $departmentOU `
+                   -AccountPassword (ConvertTo-SecureString "DefaultP@ssword1" -AsPlainText -Force) `
+                   -Enabled $true `
+                   -Title $employee.JobTitle `
+                   -EmployeeID $employee.EmployeeNumber `
+                   -Office $employee.OfficeLocation `
+                   -OfficePhone $employee.PhoneNumber
 
         # Force password change
         Set-ADUser -Identity $employee.Username -ChangePasswordAtLogon $true
 
-        # Add users to their department group 
+        # Add user to department group (groups must exist first)
         $groupName = "$($employee.Department)-Group"
         Add-ADGroupMember -Identity $groupName -Members $employee.Username -ErrorAction SilentlyContinue
 
